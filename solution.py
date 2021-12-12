@@ -28,14 +28,14 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
         pass
 
     # Send MAIL FROM command and print server response.
-    mailFrom = "MAIL FROM: <sn3098@nyu.edu> \r\n"
+    mailFrom = "MAIL FROM: <es5754@nyu.edu> \r\n"
     clientSocket.send(mailFrom.encode())
     recv2 = clientSocket.recv(1024).decode()
     if recv2[:3] != '250':
         pass
 
     # Send RCPT TO command and print server response.
-    rcptTo = "RCPT TO: <sn3098@nyu.edu> \r\n"
+    rcptTo = "RCPT TO: <es5754@nyu.edu> \r\n"
     clientSocket.send(rcptTo.encode())
     recv3 = clientSocket.recv(1024).decode()
     if recv3[:3] != '250':
